@@ -1,0 +1,62 @@
+<!DOCTYPE html> <!--Solo HTML-->
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"><!--Texto ruso-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Para telefono-->
+        <meta http-equiv="X-UA-Compatible" content="IE=9"><!--Para que se vea bien en Internet Explorer-->
+        <link rel="stylesheet" href="styles/bootstrap.min.css"><!--Conectar bootstrap - para igualdad entre browsers, 
+        para diseño mejorado y elementos ya creados-->
+        <script src="scripts/bootstrap.min.js"></script><!--para que funcionen las funciones de lo que hay que hacer al
+        pulsar botones, por ejemplo-->
+        <script src="scripts/jquery-3.7.1.min.js"></script><!--jquery - facilidad del JS-->
+        <link rel="stylesheet" href="styles/styles.css">
+        <script src="scripts/scripts.js"></script>
+        <title>Haxora | Ataque por mensaje</title><!--Nombre pagina (Hax - hack, ora - ahora)-->
+        <link rel="icon" href="favicon.ico"><!--Tipo de icono para todos browsers-->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    </head>
+
+
+    <body>
+        <header>
+            <div id="logo-container"><a href="index.html"><img src="img/logo.webp" title="Haxora" alt="Haxora"><h1>Haxora</h1></a></div>
+            <div id="intro"><p>Haxora - una página de simulacros interactiva para enseñar distintos tipos de ataques</p></div>
+            <div id="linkedin-container"><a href="https://www.linkedin.com/in/evgeniya-litinetskaya-65a263305/" target="_blank"><img src="img/icons/linkedin.svg"></a></div><!--target - abrir en una pestaña nueva-->
+        </header>
+
+        <nav id="breadcrumbs">
+            <a href="index.html">Principal</a> /
+            <a href="mail-attack.html">Ataque por correo</a> /
+            Mensaje "¡Felicidades!.."
+        </nav>
+        
+        <main class="container">
+            <h2>Ataque por correo</h2>
+            <div id="mail-container">
+                <div id="mail-panel">
+                    <h3>HAXMAIL</h3>
+                    <p class="messages">Nuevos mensajes <b><span id="upload-messages-span">0</span></b></p>
+                    <p class="messages">Nuevos mensajes <span>0</span></p>
+                    <p class="messages">Nuevos mensajes <span>0</span></p>
+                    <p class="messages">Nuevos mensajes <span>0</span></p>
+                </div>
+                <div id="message-content">
+                    <h4>¡Felicidades! Desde la <i><b>companía de Yamaha</b></i>, le regalamos una Yamaha YZF R125 del año 
+                        2024 con 0.000 km, seguro pagado por diez años, dos monos, tres cascos Shoei y 6 ruedas S23 totalmente nuevas. 
+                        <i><b>Descargue</b></i> esta documentación <i><b>de inmediato</b></i> y pégala en este enlace a continuación 
+                        para que le lleguen todos los regalos. La oferta será entregada a domicilio a los 100 
+                        <i><b>primeros usuarios</b></i> que contesten a este mensaje.
+                    </h4>
+                    <a href="#" class="modal-attack-message">enlaceRandom.exe</a><!--enlace para abrir la ventana de hackeado-->
+                </div>
+            </div>
+        </main>
+            <div id="modal-window">
+                <div class="background"></div>
+                <div class="content"><p>¡¡Le han hackeado!!</p></div>
+            </div>
+    </body>
+</html>

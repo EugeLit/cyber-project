@@ -1,0 +1,63 @@
+<!DOCTYPE html> <!--Solo HTML-->
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"><!--Texto ruso-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Para telefono-->
+        <meta http-equiv="X-UA-Compatible" content="IE=9"><!--Para que se vea bien en Internet Explorer-->
+        <link rel="stylesheet" href="styles/bootstrap.min.css"><!--Conectar bootstrap - para igualdad entre browsers, 
+        para diseño mejorado y elementos ya creados-->
+        <script src="scripts/bootstrap.min.js"></script><!--para que funcionen las funciones de lo que hay que hacer al
+        pulsar botones, por ejemplo-->
+        <script src="scripts/jquery-3.7.1.min.js"></script><!--jquery - facilidad del JS-->
+        <link rel="stylesheet" href="styles/styles.css">
+        <script src="scripts/scripts.js"></script>
+        <title>Haxora | Teoría ataque por mensaje</title><!--Nombre pagina (Hax - hack, ora - ahora)-->
+        <link rel="icon" href="favicon.ico"><!--Tipo de icono para todos browsers-->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/modal-window-img.css"><!--conectar el css de la ventana modal-->
+        <script src="scripts/modal-window-img.js"></script><!--conectar el js de la ventana modal-->
+    </head>
+
+    
+    <body>
+        <header>
+            <div id="logo-container"><a href="index.html"><img src="img/logo.webp" title="Haxora" alt="Haxora"><h1>Haxora</h1></a></div>
+            <div id="intro"><p>Haxora - una página de simulacros interactiva para enseñar distintos tipos de ataques</p></div>
+            <div id="linkedin-container"><a href="https://www.linkedin.com/in/evgeniya-litinetskaya-65a263305/" target="_blank"><img src="img/icons/linkedin.svg"></a></div><!--target - abrir en una pestaña nueva-->
+        </header>
+
+        <nav id="breadcrumbs">
+            <a href="index.html">Principal</a> /
+            Teoría ataque por mensaje
+        </nav>
+
+        <main class="container">
+            <h2>Teoría del ataque por mensaje</h2>
+            <p class="theory-text"><i>
+                Consisten en enviar <b>mensajes</b> que parecen <b>fiables</b> para que la víctima 
+                pulse un enlace falso o <b>entregue datos</b>, como códigos de verificación. 
+                El atacante suele <b>hacerse pasar</b> por un <b>contacto</b> o servicio <b>conocido</b>.
+            </i></p>
+
+            <figure><!--tag para vídeos o fotos-->
+				<img src="img/gif_theory_message.gif" data-modal-window-img="img/gif_theory_message.gif" alt="imágen" title="imágen"><!--data-modal-window-img - foto en la pantalla grande-->
+				<figcaption>GIF creado con Figma</figcaption><!--texto sobre la procedencia de la imágen debajo-->
+			</figure>
+
+            <p class="theory-text"><i>
+                En <b>2021</b> se viralizó un ataque donde los hackers enviaban a las víctimas un mensaje 
+                <b>pidiendo</b> un <b>“código de verificación</b> que llegó por error”. Al enviarlo, la víctima 
+                perdía el acceso a su cuenta de WhatsApp, que luego los <b>atacantes</b> usaban para <b>estafar a más contactos</b>.
+            </i></p>
+        </main>
+
+        <div id="modal-window-img"><!--otra ventana modal para ampliación de fotos-->
+            <div class="background"></div>
+            <div class="content"></div>
+        </div>
+
+    </body>
+</html>

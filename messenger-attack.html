@@ -1,0 +1,93 @@
+<!DOCTYPE html> <!--Solo HTML-->
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"><!--Texto ruso-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Para telefono-->
+        <meta http-equiv="X-UA-Compatible" content="IE=9"><!--Para que se vea bien en Internet Explorer-->
+        <link rel="stylesheet" href="styles/bootstrap.min.css"><!--Conectar bootstrap - para igualdad entre browsers, 
+        para diseño mejorado y elementos ya creados-->
+        <script src="scripts/bootstrap.min.js"></script><!--para que funcionen las funciones de lo que hay que hacer al
+        pulsar botones, por ejemplo-->
+        <script src="scripts/jquery-3.7.1.min.js"></script><!--jquery - facilidad del JS-->
+        <link rel="stylesheet" href="styles/styles.css">
+        <script src="scripts/scripts.js"></script>
+        <title>Haxora | Ataque por mensaje</title><!--Nombre pagina (Hax - hack, ora - ahora)-->
+        <link rel="icon" href="favicon.ico"><!--Tipo de icono para todos browsers-->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <script>
+            $(function(){/*invocar la func de aparición del mensaje malicioso*/
+                setTimeout(() => { create_message(); }, 5000);/*en 5 seg empezará la func  create_message()*/
+            });
+        </script>
+    </head>
+
+
+    <body>
+        <header>
+            <div id="logo-container"><a href="index.html"><img src="img/logo.webp" title="Haxora" alt="Haxora"><h1>Haxora</h1></a></div>
+            <div id="intro"><p>Haxora - una página de simulacros interactiva para enseñar distintos tipos de ataques</p></div>
+            <div id="linkedin-container"><a href="https://www.linkedin.com/in/evgeniya-litinetskaya-65a263305/" target="_blank"><img src="img/icons/linkedin.svg"></a></div><!--target - abrir en una pestaña nueva-->
+        </header>
+
+        <nav id="breadcrumbs">
+            <a href="index.html">Principal</a> /
+            Ataque por mensaje
+        </nav>
+
+        <main class="container">
+            <h2>Ataque por mensaje</h2>
+            <div id="messenger-container">
+                <div id="messenger-panel">
+                    <h3>HAXMENGER</h3>
+                    <div id="messages-container">
+                        <div class="message-block bad-message"><div class="img-wrapper"><img src="img/photo_chhat.jpeg"></div><!--bloque del chat bueno-->
+                            <div class="message-info">
+                                <h5>+49</h5>
+                                <p>Mensaje malicioso</p>
+                            </div>
+                        </div>
+                        
+                        <div class="message-block"><img src=""><!--bloque del chat bueno-->
+                            <div class="message-info">
+                                <h5>+34</h5>
+                                <p>Mensaje random</p>
+                            </div>
+                        </div>
+
+                        <div class="message-block"><img src=""><!--bloque del chat bueno-->
+                            <div class="message-info">
+                                <h5>Number +34</h5>
+                                <p>Mensaje random</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="chat-content"><!--bloque del chat malo-->
+                    <div id="header"><!--parte de arriba-->
+                        <div class="img-wrapper"><img src="img/photo_chhat.jpeg"></div>
+                        <h5>Number +49</h5>
+                    </div>
+                    <div id="main"><!--mensaje-->
+                        <div class="message-content">
+                            OYE BRO. Necesito urgentemente tu ayuda. Me ha atropellado un borracho de esos y necesito dinero para pagar
+                            el seguro del hospital, que estoy pobre. Pásame el dinero a esta cuenta ahora mismo, que sino me muero!!
+                            <br>
+                            <a href="#" class="modal-attack-message">ßßVA.com</a>
+                        </div>
+                    </div>
+                    <div id="footer"><!--Parte de abajo-->
+                        <input placeholder="Enviar mensaje...">
+                        <button>Mandar</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+            <div id="modal-window">
+                <div class="background"></div>
+                <div class="content"><p>¡¡Le han hackeado!!</p></div>
+            </div>
+    </body>
+</html>

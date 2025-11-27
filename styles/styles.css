@@ -1,0 +1,529 @@
+:root{
+    --color1:#459B46;
+    --color2:black;
+    --color3:white;
+    --color4:#8AE659;
+    --color5:#000000BB;
+    --color6:#459B46AA;
+    --color7:#459B4655;
+}/*Variables CSS*/
+
+/*conectar fuentes de texto*/
+@font-face {
+    font-family:"ShantellSans";
+    font-weight:700; 
+    font-style:normal;
+    src: url("../fonts/ShantellSans-Bold.woff2");/* woff2 - formatos del texto*/
+    /*woff2 - más nuevo, para casi todos los browsers, pesa menos*/
+}
+
+@font-face {
+    font-family:"ShantellSans";
+    font-weight:700;  
+    font-style:italic;
+    src: url("../fonts/ShantellSans-BoldItalic.woff2");
+}
+
+@font-face {
+    font-family:"ShantellSans";
+    font-weight:800;  
+    font-style:normal;
+    src: url("../fonts/ShantellSans-ExtraBold.woff2");
+}
+
+@font-face {
+    font-family:"ShantellSans";
+    font-weight:800;  
+    font-style:italic;
+    src: url("../fonts/ShantellSans-ExtraBoldItalic.woff2");
+}
+
+@font-face {
+    font-family:"ShantellSans";
+    font-weight:400;  
+    font-style:italic;
+    src: url("../fonts/ShantellSans-Italic.woff2");
+}
+@font-face {
+    font-family:"ShantellSans";
+    font-weight:300;  
+    font-style:normal;
+    src: url("../fonts/ShantellSans-Light.woff2");
+}
+@font-face {
+    font-family:"ShantellSans";
+    font-weight:300;  
+    font-style:italic;
+    src: url("../fonts/ShantellSans-LightItalic.woff2");
+}
+@font-face {
+    font-family:"ShantellSans";
+    font-weight:500;  
+    font-style:normal;
+    src: url("../fonts/ShantellSans-Medium.woff2");
+}
+@font-face {
+    font-family:"ShantellSans";
+    font-weight:500;  
+    font-style:italic;
+    src: url("../fonts/ShantellSans-MediumItalic.woff2");
+}
+@font-face {
+    font-family:"ShantellSans";
+    font-weight:400;  
+    font-style:normal;
+    src: url("../fonts/ShantellSans-Regular.woff2");
+}
+@font-face {
+    font-family:"ShantellSans";
+    font-weight:600;  
+    font-style:normal;
+    src: url("../fonts/ShantellSans-SemiBold.woff2");
+}
+@font-face {
+    font-family:"ShantellSans";
+    font-weight:600;  
+    font-style:italic;
+    src: url("../fonts/ShantellSans-SemiBoldItalic.woff2");
+}
+
+/*GENERAL PARA TODOS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+*{/*para todos elementos*/
+    font-family:"ShantellSans";
+    transition:.3s;/*300 milisegundos animación*/
+    cursor:url("../img/cursors/default.cur"), default;/*poner el cursor como bug*/
+}
+body{
+    background:black;
+    min-height:100vh;/*100% mínimo de toda pantalla*/
+    background-image: url('../img/background.webp');
+    background-size: cover; /* para toda la pantalla */
+    background-repeat: no-repeat; /* para no repetir */
+    background-position: center center; /* ponerla en el centro */
+    background-attachment: fixed; /* siempre el fondo estará en el centro */
+}
+
+#breadcrumbs{
+    background:var(--color2);
+    border-bottom:1px solid var(--color1);
+    box-shadow:0 0 10px var(--color4);
+    padding:5px 5px 5px 30px; 
+    color:var(--color4);
+}
+
+#breadcrumbs a{
+    color:inherit;/*inherit - coger en "breadcrumbs" el color a "a" del "breadcrumbs"*/
+}
+
+figure{
+	margin: 30px 10px;
+	text-align: center;
+}
+
+figure img{
+	border-radius: 10px;
+    max-width:50%;
+}
+
+figcaption{
+	margin-top: 10px;
+	color: var(--color4);
+}
+
+header #intro p{
+    font-size:20px;
+}
+
+header{
+    background:var(--color2);
+    border-bottom:1px solid var(--color1);
+    box-shadow:0 0 10px var(--color4);
+    /*backdrop-filter: blur(3px);difuminar*/
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+#linkedin-container a img{
+    width:100%;
+    height:100%;
+}
+
+#linkedin-container{
+    height:45px;
+    margin-right:10px;
+}
+
+#logo-container a{
+    display:flex;
+    align-items:center;
+    color:var(--color4);
+    text-decoration:none;
+}
+
+#logo-container h1{
+    font-weight:600;/*Negrita*/
+    text-transform:uppercase;/*Mayúsculas*/
+}
+
+#logo-container img{
+    width:100px;
+}
+
+main{/*bloque negro*/
+    margin-top:50px;
+    padding:15px; 
+    background:var(--color5);
+    border:1px solid var(--color1);
+    box-shadow:0 0 15px var(--color4);
+    backdrop-filter: blur(4px);/*difuminar*/
+    color:var(--color4);
+}
+
+h2{
+    text-align:center;
+    text-transform:uppercase;
+}
+
+#main-table{/*tabla de bloques verdes*/
+    display:flex;
+    flex-direction:column;
+    gap:10px;/*distancia entre dos elementos para display flex*/
+}
+
+#main-table .row div{/*contenido bloque verde*/
+    width:49%;
+    backdrop-filter: blur(5px);
+    background:var(--color6);
+    box-shadow:0 0 5px var(--color4);
+}
+
+#main-table .row{/*bloque verde*/
+    display:flex;
+    gap:10px;
+    flex-direction:row;
+    margin-left:200px;
+}
+
+#main-table .row .theory{/*bloque teoría*/
+    width:10%;
+    padding:5px;
+    display:flex;
+    justify-content:center;
+}
+
+#main-table .row .pract{/*bloque práctica*/
+    padding:5px;
+    width:70%;
+}
+
+p{/*texto*/
+    color:var(--color4);
+    text-transform:uppercase;
+    font-size:40px;
+    margin:0;
+    padding:0;
+}
+
+#main-table a{
+  text-decoration:none; 
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+/*TEORÍA ATAQUE POR CORREO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+.container .theory-text{
+    font-size:30px;
+    text-align:center;
+}
+
+
+/*ATAQUE DE CORREO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+#mail-container{
+    display:flex;
+    gap:10px;
+    height:600px;
+}
+
+#mail-container #mail-panel{
+    backdrop-filter: blur(5px);
+    background:var(--color6);
+    box-shadow:0 0 5px var(--color4);
+    padding:5px;
+    width:250px;
+}
+
+#mail-container .table-row{
+    backdrop-filter: blur(5px);
+    background:var(--color6);
+    box-shadow:0 0 5px var(--color4);
+}
+
+#mail-container .table-row button{
+    padding:10px;
+    background:none;
+    border:none;
+    text-align:left;
+}
+
+#mail-container .table-row button:hover{/*para animar al pasar el cursor por encima*/
+    background:var(--color1);
+}
+
+#mail-container .table-row p{
+    margin:0;
+    padding:0;
+    font-size:16px;
+}
+#mail-table{
+    display:flex;
+    gap:10px;
+    flex-direction:column;
+    flex-grow:1;/*coger lo que quede de width*/
+} 
+
+#mail-container h3{
+    text-align:center;
+    font-size:25px;
+    margin-bottom: 20px;
+}
+
+#mail-container .messages{
+    font-size:16px;
+    display:flex;
+    justify-content:space-between;
+}
+
+#mail-container #attack-message{
+    display:none;
+}
+
+#modal-window{
+    position: fixed;/*posición fijada en la pantalla*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000; /*para que esté alante del todo*/
+    display: none; /*para que no se vea al principio*/
+}
+
+#modal-window .background{
+    width: 100%;
+    height: 100%;
+    background: #22252C88;
+    backdrop-filter: blur(3px);
+    cursor:pointer;
+}
+
+#modal-window .content{
+    background:var(--color6);
+    top:15%;
+    bottom:25%;
+    right:20%;
+    left:20%;
+    position:fixed;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#mail-container #message-content{
+    backdrop-filter: blur(5px);
+    background:var(--color6);
+    box-shadow:0 0 5px var(--color4);
+    width:100%;
+    padding:10px;
+}
+
+#mail-container #message-content h4{
+    color:var(--color4);
+}
+
+
+
+/*ATAQUE DE MENSAJE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+#messenger-container{
+    display:flex;
+    gap:10px;
+    height:600px;
+}
+
+#messenger-panel{
+    backdrop-filter: blur(5px);
+    background:var(--color6);
+    box-shadow:0 0 5px var(--color4);
+    padding:5px;
+    width:250px;
+}
+
+#messages-container{
+    display:flex;
+    gap:10px;
+    flex-direction:column;
+}
+
+.message-block{
+    display:flex;
+    padding:5px;
+    border-radius:5px;
+    cursor:pointer;
+    border:1px solid var(--color1);
+}
+
+.message-block:hover{
+    background:rgb(113, 158, 113);
+}
+
+.message-info{/*info del bloque del chat (número y texto)*/
+    display:flex;
+    gap:5px;
+    flex-direction:column;
+    width:calc(100% - 64px - 5px);/*calcular en px medida 100% - .message-bock img - gap*/
+}
+
+.message-info p{/*texto del chat*/
+    font-size:16px;
+    white-space:nowrap;/*prohibir paso de línea (punto y aparte)*/
+    overflow:hidden;/*ocultar el texto que se sale*/
+    width:100%;
+    text-overflow:ellipsis;/*tres puntos al final*/
+}
+
+.message-block .img-wrapper{/*imagen del chat*/
+    width:64px;
+    height:64px;
+    border-radius:100%;
+    overflow:hidden;
+    display:flex;/*poner la foto en el centro*/
+    margin-right:5px;
+}
+
+.message-block .img-wrapper img{
+    width:100%;
+}
+
+#chat-content{/*bloque de chat*/
+    box-shadow:0 0 5px var(--color4);
+    width:100%;
+    height:100%;
+    padding:5px;
+}
+
+#chat-content #header{/*contacto arriba*/
+    height:80px;
+    border:1px solid var(--color1);
+    display:flex;
+    align-items:center;
+    padding:8px;
+    background:var(--color6);
+    backdrop-filter: blur(5px);
+}
+
+#chat-content #header .img-wrapper{/*foto perfil*/
+    width:64px;
+    height:64px;
+    border-radius:100%;
+    overflow:hidden;
+    display:flex;
+    margin-right:10px;
+}
+
+#chat-content #header h5{/*contacto número*/
+    font-size:25px;
+}
+
+#chat-content #header .img-wrapper img{
+    width:100%;
+}
+
+#chat-content #main{/*bloque central*/
+    height:calc(100% - 80px - 50px);
+    border:1px solid var(--color1);
+    background:var(--color7);
+    backdrop-filter: blur(5px);
+}
+
+#chat-content #main .message-content{/*bloque mensaje en el chat*/
+    background:var(--color6);
+    width:30%;
+    border-radius:5px;
+    margin-top:100px;
+    margin-left:10px;
+    padding:5px;
+}
+
+#chat-content #footer{/*parte inferior del chat*/
+    height:50px;
+    border:1px solid var(--color1);
+    display:flex;
+    background:var(--color6);
+    backdrop-filter: blur(5px);
+}
+
+#chat-content #footer input{/*bloque enviar mensaje*/
+    flex-grow:1;
+    background:var(--color6);
+    padding:5px;
+    border:1px solid var(--color6);
+}
+
+#chat-content #footer input::placeholder {/*color del texto dentro del input*/
+  color:var(--color4);
+}
+
+#chat-content #footer button{/*bloque boton mandar*/
+    width:90px;
+    background:var(--color6);
+    color:var(--color4);
+    border:1px solid var(--color6);
+}
+
+/*ATAQUE POR IA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+#ai-container{/*dos bloques de vídeo y audio*/
+    display:flex;
+    justify-content:space-around;
+    gap:30px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+#ai-container h3{
+    margin-bottom:20px;
+}
+
+#video-container, #audio-container{
+    width:calc(50% - 15px);/*ajustar su medida y espacio entre ellos*/
+    background:var(--color6);
+    border-bottom:1px solid var(--color1);
+    box-shadow:0 0 10px var(--color4);
+    backdrop-filter: blur(3px);
+    padding:10px;
+    text-align:center;
+    border-radius:5px;
+}
+
+#video-container video{/*100% del div*/
+    width:50%;
+    border-radius:5px;
+}
+
+#ai-container h2{
+    font-size:20px;
+}
+
+#audio-container audio{/*100% del div*/
+    width:100%;
+}
+
+#audio-wrapper{/*para ajustar la posición del audio*/
+    display:flex;
+    align-items:center;
+    height:80%;
+}
