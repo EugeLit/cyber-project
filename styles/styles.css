@@ -93,6 +93,7 @@
     font-family:"ShantellSans";
     transition:.3s;/*300 milisegundos animación*/
     cursor:url("../img/cursors/default.cur"), default;/*poner el cursor como bug*/
+    cursor:url("../img/cursors/pointer.cur"), pointer;/*poner el cursor como bug*/
 }
 body{
     background:black;
